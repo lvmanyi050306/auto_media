@@ -1,0 +1,62 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Python cache and local environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+ENV/
+基础案例A-视觉分析2/.pydeps/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+~$*
+报告渲染检查/
+基础案例A-视觉分析2/报告渲染检查/
+
+# Do not upload PDF exports for this assignment
+*.pdf
+
+# Large raw scan folders
+3-以端正易读方式抄写符号/
+4-以美观方式抄写符号/
+5-以极致扭曲方式抄写符号/
+
+# Cropped/generated image datasets
+基础案例A-视觉分析2/Data/
+视觉特征计算/Data/
+
+# Local model weights and downloaded model caches
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.safetensors
+*.bin
+视觉特征计算/model/
+基础案例A-视觉分析2/models/
+
+# Large generated feature matrices.
+# Keep scripts, reports, summaries, and result figures in git.
+基础案例A-视觉分析2/1_视觉特征/*.csv
+基础案例A-视觉分析2/2_视觉主成分/*.csv
+基础案例A-视觉分析2/3_降维到二维平面/*.csv
+选题5_基于题4拓展分析/data/processed/*.csv
+
+# Optional local archives
+*.zip
+*.7z
+*.rar

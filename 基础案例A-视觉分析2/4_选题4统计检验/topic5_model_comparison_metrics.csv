@@ -1,0 +1,5 @@
+﻿model,n_samples,n_features,accuracy,macro_f1
+ResNet50,5760,20,0.670139,0.669966
+Swin_T,5760,20,0.675000,0.674999
+Morphology,5323,17,0.703982,0.703944
+Fusion,5323,57,0.738542,0.738518

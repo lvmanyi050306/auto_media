@@ -1,0 +1,4 @@
+﻿style,style_label,total_samples,valid_samples,excluded_samples,valid_rate
+legible,端正易读,2880,2734,146,0.9493
+aesthetic,美观,2880,2654,226,0.9215
+distorted,极致扭曲,2880,2669,211,0.9267
