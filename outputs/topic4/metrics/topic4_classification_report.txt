@@ -1,0 +1,9 @@
+              precision    recall  f1-score   support
+
+        端正易读       0.89      0.97      0.93       576
+          美观       0.66      0.62      0.64       576
+        极致扭曲       0.68      0.66      0.67       576
+
+    accuracy                           0.75      1728
+   macro avg       0.74      0.75      0.74      1728
+weighted avg       0.74      0.75      0.74      1728

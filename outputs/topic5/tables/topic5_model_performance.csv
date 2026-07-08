@@ -1,0 +1,5 @@
+﻿model,n_features,split,accuracy,macro_f1,n_samples,n_train,n_test
+ResNet50,20,"GroupShuffleSplit(page_id, 8:2)",0.6869955156950672,0.6869955156950672,5323,4208,1115
+Swin_T,20,"GroupShuffleSplit(page_id, 8:2)",0.6977578475336322,0.697640135796598,5323,4208,1115
+Morphology,12,"GroupShuffleSplit(page_id, 8:2)",0.704932735426009,0.704384888320852,5323,4208,1115
+Fusion,52,"GroupShuffleSplit(page_id, 8:2)",0.7524663677130045,0.7524215607401448,5323,4208,1115

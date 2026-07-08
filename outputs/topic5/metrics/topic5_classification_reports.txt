@@ -1,0 +1,43 @@
+===== ResNet50 =====
+              precision    recall  f1-score   support
+
+          美观       0.69      0.68      0.69       563
+        极致扭曲       0.68      0.69      0.69       552
+
+    accuracy                           0.69      1115
+   macro avg       0.69      0.69      0.69      1115
+weighted avg       0.69      0.69      0.69      1115
+
+
+===== Swin_T =====
+              precision    recall  f1-score   support
+
+          美观       0.71      0.67      0.69       563
+        极致扭曲       0.68      0.72      0.70       552
+
+    accuracy                           0.70      1115
+   macro avg       0.70      0.70      0.70      1115
+weighted avg       0.70      0.70      0.70      1115
+
+
+===== Morphology =====
+              precision    recall  f1-score   support
+
+          美观       0.69      0.74      0.72       563
+        极致扭曲       0.72      0.67      0.69       552
+
+    accuracy                           0.70      1115
+   macro avg       0.71      0.70      0.70      1115
+weighted avg       0.71      0.70      0.70      1115
+
+
+===== Fusion =====
+              precision    recall  f1-score   support
+
+          美观       0.75      0.76      0.76       563
+        极致扭曲       0.75      0.75      0.75       552
+
+    accuracy                           0.75      1115
+   macro avg       0.75      0.75      0.75      1115
+weighted avg       0.75      0.75      0.75      1115
+

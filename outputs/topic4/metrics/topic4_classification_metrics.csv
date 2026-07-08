@@ -1,0 +1,2 @@
+﻿model,accuracy,macro_f1,n_samples,n_train,n_test
+ResNet50_PCA_RandomForest,0.7488425925925926,0.7448536998569047,8640,6912,1728
