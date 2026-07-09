@@ -35,21 +35,12 @@ F:\project\智能媒体工作坊
 pip install -r requirements.txt
 ```
 
-如果默认 Python 缺少 `pandas` 等库，也可以临时复用项目本地依赖：
-
-```powershell
-$env:PYTHONPATH=(Resolve-Path '基础案例A-视觉分析2\.pydeps').Path
-```
-
 ## 本地模型
 
 脚本优先检查并使用本地模型，不强制联网下载：
 
 - `视觉特征计算\model\torchvision\ResNet50.pth`
 - `视觉特征计算\model\torchvision\Swin_T.pth`
-- `视觉特征计算\model\torchvision\ViT_B16.pth`
-- `视觉特征计算\model\hf_models\openai__clip-vit-base-patch32`
-- `视觉特征计算\model\hf_models\facebook__dinov2-base`
 
 如果 `.pth` 权重不存在，`src/feature_extraction.py` 会 fallback 到 `weights=None`。随机初始化只能验证流程，不适合作为正式实验结论。
 
@@ -61,13 +52,9 @@ python src/main.py --task check
 
 ## 数据裁切
 
-原始扫描页位于：
+为精简提交内容，仓库不保留原始扫描页，只保留 `基础案例A-视觉分析2/Data` 中的 8640 张裁切图像和 `image_index.csv`。
 
-- `3-以端正易读方式抄写符号`
-- `4-以美观方式抄写符号`
-- `5-以极致扭曲方式抄写符号`
-
-裁切脚本：
+如果需要重新裁切，应先把三类原始扫描页恢复到项目根目录，再运行：
 
 ```powershell
 python src/crop_pages.py
@@ -118,7 +105,6 @@ python src/main.py --all --skip-feature
 
 选题 5 输出：
 
-- `outputs/topic5/figures/topic5_aesthetic_vs_distorted_examples.png`
 - `outputs/topic5/figures/topic5_accuracy_macro_f1_bars.png`
 - `outputs/topic5/figures/topic5_feature_space_comparison.png`
 - `outputs/topic5/figures/topic5_confusion_matrices.png`
@@ -131,10 +117,10 @@ python src/main.py --all --skip-feature
 ## 常见问题
 
 1. `ModuleNotFoundError: pandas`  
-   运行 `pip install -r requirements.txt`，或先设置本地依赖路径：`$env:PYTHONPATH=(Resolve-Path '基础案例A-视觉分析2\.pydeps').Path`。
+   运行 `pip install -r requirements.txt`。
 
 2. `ViTFeatureExtractor` 过时  
    原始 `视觉分析.py` 中仍有旧接口，因此本项目正式实验优先使用 `torchvision` 的 ResNet50 和 Swin_T 本地权重。
 
 3. GitHub 上传过大  
-   `.gitignore` 已忽略原始扫描页、裁切数据、大模型权重和本地依赖，不建议把这些大文件提交到 GitHub。
+   `.gitignore` 已忽略原始扫描页、裁切数据和大模型权重。若大文件已进入旧提交，仅删除工作区文件不会缩小 `.git`，还需要另行重建或清理 Git 历史。
